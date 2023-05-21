@@ -197,7 +197,7 @@ namespace Übergabeprotokoll
             CheckForIllegalCrossThreadCalls = false;
             this.Location = new Point(frmHauptprogramm.MousePosition.X, frmHauptprogramm.MousePosition.Y);
 
-
+            //
         }
     }
 }
