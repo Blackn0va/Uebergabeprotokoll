@@ -10,6 +10,7 @@ namespace Übergabeprotokoll
 {
     class Protokoll_Variable_ersetzen
     {
+        [STAThread]
         public static void ersetzen(string Dateiname, string SpeicherpfadProtokolle)
         {
             Action t_Datei_loeschen = () =>

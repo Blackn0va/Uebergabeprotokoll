@@ -12,7 +12,7 @@ namespace Übergabeprotokoll
     {
         //get workingdirectory
          string SpeicherpfadProtokolle = Environment.CurrentDirectory + @"\Protokolle\";
-        string Dateiname = "";
+         string Dateiname = "";
 
          public frmHauptprogramm()
         {
@@ -49,6 +49,7 @@ namespace Übergabeprotokoll
 
         }
 
+        [STAThread]
         public void ProtokolleLaden()
         {
             //clear listbox
@@ -200,6 +201,7 @@ namespace Übergabeprotokoll
                 null, control, new object[] { true });
         }
 
+        [STAThread]
         private void tabProtokolle_Enter(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;

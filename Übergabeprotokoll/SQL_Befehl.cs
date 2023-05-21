@@ -9,7 +9,7 @@ namespace Übergabeprotokoll
     {
        public static string con = "Data Source=Protokolle.db";
         // Create a connection to the database file
-       public static SQLiteConnection connection = new SQLiteConnection(con);
+        public static SQLiteConnection connection = new SQLiteConnection(con);
         public static SQLiteCommand command = connection.CreateCommand();
         public static frmHauptprogramm frmHauptprogramm = System.Windows.Forms.Application.OpenForms[0] as frmHauptprogramm;
 
