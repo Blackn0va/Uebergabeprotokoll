@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -12,8 +14,7 @@ namespace Übergabeprotokoll
          string SpeicherpfadProtokolle = Environment.CurrentDirectory + @"\Protokolle\";
         string Dateiname = "";
 
-
-        public frmHauptprogramm()
+         public frmHauptprogramm()
         {
             InitializeComponent();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -21,8 +22,11 @@ namespace Übergabeprotokoll
             AutoScaleMode = 0;
         }
 
+        [STAThread]
         private void frmHauptprogramm_Load(object sender, EventArgs e)
         {
+            //CheckForIllegalCrossThreadCalls = false;
+
             //Software Version FormText anzeigen
             this.Text = "Übergabeprotokoll Tool - " + this.ProductVersion.ToString();
 
@@ -66,36 +70,42 @@ namespace Übergabeprotokoll
 
         }
 
+        [STAThread]
         private void cmdOK_Click(object sender, EventArgs e)
         {
             SQL_Befehl.Speichern();
         }
 
+        [STAThread]
         private void cmdUpdate_Click(object sender, EventArgs e)
         {
             SQL_Befehl.Update();
 
         }
 
+        [STAThread]
         private void cmdDelete_Click(object sender, EventArgs e)
         {
             SQL_Befehl.Delete();
 
         }
 
-        private void cmdPrint_Click(object sender, EventArgs e)
+        [STAThread]
+        private void cmdErstellen(object sender, EventArgs e)
         {
  
                     Protokoll_Variable_ersetzen.ersetzen(Dateiname, SpeicherpfadProtokolle);
   
         }
 
+        [STAThread]
         private void cmdSearch_Click(object sender, EventArgs e)
         {
             SQL_Befehl.Search();
 
         }
 
+        [STAThread]
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
             try
@@ -105,6 +115,7 @@ namespace Übergabeprotokoll
             catch { }
         }
 
+        [STAThread]
         private void dgvProtokolle_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             this.lblID.Text = dgvProtokolle.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -134,6 +145,7 @@ namespace Übergabeprotokoll
             this.txtKennwort.Text = dgvProtokolle.Rows[e.RowIndex].Cells[25].Value.ToString();
         }
 
+        [STAThread]
         private void ckUebergabe_CheckedChanged(object sender, EventArgs e)
         {
             if (ckUebergabe.Checked == true)
@@ -142,6 +154,7 @@ namespace Übergabeprotokoll
             }
         }
 
+        [STAThread]
         private void ckRueckgabe_CheckedChanged(object sender, EventArgs e)
         {
             if (ckRueckgabe.Checked == true)
@@ -150,6 +163,7 @@ namespace Übergabeprotokoll
             }
         }
 
+        [STAThread]
         private void txtSuchen_KeyPress(object sender, KeyPressEventArgs e)
         {
             //wenn die taste Enter gedrückt wurde
@@ -157,6 +171,33 @@ namespace Übergabeprotokoll
             {
                 SQL_Befehl.Search();
             }
+        }
+
+        [STAThread]
+        private void cmdPdferstellen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Protokoll_Variable_ersetzen.ersetzen(Dateiname, SpeicherpfadProtokolle);
+            }
+            catch { }
+        }
+
+        [STAThread]
+        public static void SetDoubleBuffered(Control control)
+        {
+            // set instance non-public property with name "DoubleBuffered" to true
+            typeof(Control).InvokeMember("DoubleBuffered",
+                BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
+                null, control, new object[] { true });
+        }
+
+        private void tabProtokolle_Enter(object sender, EventArgs e)
+        {
+            CheckForIllegalCrossThreadCalls = false;
+            this.Location = new Point(frmHauptprogramm.MousePosition.X, frmHauptprogramm.MousePosition.Y);
+
+
         }
     }
 }

@@ -55,7 +55,6 @@
             this.ckUebergabe = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.cmdErstellen = new System.Windows.Forms.Button();
             this.lblSuchen = new System.Windows.Forms.Label();
             this.txtSuchen = new System.Windows.Forms.TextBox();
             this.anmerkungenTextBox = new System.Windows.Forms.TextBox();
@@ -106,6 +105,7 @@
             this.tabProtokolle2 = new System.Windows.Forms.TabPage();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.cmdPdferstellen = new System.Windows.Forms.Button();
             label10 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             agentLabel = new System.Windows.Forms.Label();
@@ -418,18 +418,6 @@
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(103, 44);
             this.lblStatus.TabIndex = 120;
-            // 
-            // cmdErstellen
-            // 
-            this.cmdErstellen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdErstellen.Location = new System.Drawing.Point(697, 680);
-            this.cmdErstellen.Margin = new System.Windows.Forms.Padding(2);
-            this.cmdErstellen.Name = "cmdErstellen";
-            this.cmdErstellen.Size = new System.Drawing.Size(284, 27);
-            this.cmdErstellen.TabIndex = 30;
-            this.cmdErstellen.Text = "PDF erstellen";
-            this.cmdErstellen.UseVisualStyleBackColor = true;
-            this.cmdErstellen.Click += new System.EventHandler(this.cmdPrint_Click);
             // 
             // lblSuchen
             // 
@@ -784,6 +772,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cmdPdferstellen);
             this.tabPage1.Controls.Add(this.agentTextBox);
             this.tabPage1.Controls.Add(label10);
             this.tabPage1.Controls.Add(this.txtKennwort);
@@ -794,7 +783,6 @@
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.lblStatus);
             this.tabPage1.Controls.Add(this.lblID);
-            this.tabPage1.Controls.Add(this.cmdErstellen);
             this.tabPage1.Controls.Add(this.lblSuchen);
             this.tabPage1.Controls.Add(this.txtSuchen);
             this.tabPage1.Controls.Add(agentLabel);
@@ -1038,6 +1026,7 @@
             this.tabProtokolle.SelectedIndex = 0;
             this.tabProtokolle.Size = new System.Drawing.Size(1283, 750);
             this.tabProtokolle.TabIndex = 1;
+            this.tabProtokolle.Enter += new System.EventHandler(this.tabProtokolle_Enter);
             // 
             // tabProtokolle2
             // 
@@ -1065,6 +1054,18 @@
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // cmdPdferstellen
+            // 
+            this.cmdPdferstellen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdPdferstellen.Location = new System.Drawing.Point(680, 681);
+            this.cmdPdferstellen.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdPdferstellen.Name = "cmdPdferstellen";
+            this.cmdPdferstellen.Size = new System.Drawing.Size(195, 27);
+            this.cmdPdferstellen.TabIndex = 129;
+            this.cmdPdferstellen.Text = "PDF erstellen";
+            this.cmdPdferstellen.UseVisualStyleBackColor = true;
+            this.cmdPdferstellen.Click += new System.EventHandler(this.cmdPdferstellen_Click);
             // 
             // frmHauptprogramm
             // 
@@ -1095,7 +1096,6 @@
         public System.Windows.Forms.CheckBox ckUebergabe;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Button cmdErstellen;
         private System.Windows.Forms.Label lblSuchen;
         public System.Windows.Forms.TextBox txtSuchen;
         public System.Windows.Forms.TextBox anmerkungenTextBox;
@@ -1146,6 +1146,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.PrintDialog printDialog1;
         public System.Windows.Forms.TextBox agentTextBox;
+        private System.Windows.Forms.Button cmdPdferstellen;
     }
 }
 

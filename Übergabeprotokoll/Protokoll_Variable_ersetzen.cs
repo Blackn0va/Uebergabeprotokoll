@@ -47,16 +47,10 @@ namespace Übergabeprotokoll
 
 
                     Type wordType = Type.GetTypeFromProgID("Word.Application");
-                    if (wordType != null) // Check if the type is valid
-                    {
+
                         dynamic msword = Activator.CreateInstance(wordType);
                         // Do something with msword
-                    }
-                    else
-                    {
-                        MessageBox.Show("Word ist nicht installiert!");
-                        return;
-                    }
+
 
                     Microsoft.Office.Interop.Word.Application wordApp = new Microsoft.Office.Interop.Word.Application { Visible = false };
                     Microsoft.Office.Interop.Word.Document aDoc = wordApp.Documents.Open(fileName, ReadOnly: false, Visible: false);
@@ -68,7 +62,7 @@ namespace Übergabeprotokoll
                     FindAndReplace(wordApp, "{DATUM}", frmHauptprogramm.lblDatum.Text);
 
                     //Notebook
-                    if (frmHauptprogramm.ausgabe_Rueckgabe_NotebookComboBox.Text is null)
+                    if (frmHauptprogramm.ausgabe_Rueckgabe_NotebookComboBox.Text.ToString() is null)
                     {
                         FindAndReplace(wordApp, "{NB_AUSGABE}", "");
                     }
