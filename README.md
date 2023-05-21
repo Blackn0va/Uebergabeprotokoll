@@ -2,7 +2,10 @@
 
 Mit diesem Tool kann man Übergabeprotokolle erstellen. Einfach ein paar Informationen eintragen und speichern. Gespeichert wird in einer Lokalen Flatfile SQLite Datenbank.
 
-Erstellt wird ein PDF´f Dokument, welches unterschrieben werden kann.
+Erstellt wird ein PDF Dokument, welches unterschrieben werden kann.
+
+Datensätze können mit dem Nachnamen gesucht, bearbeitet oder gelöscht werden.
+Das PDF File wird mit dem Schema: Datum_Übergabe_Vorname_Nachname.pdf, oder Datum_Rückgabe_Vorname_Nachname.pdf gespeichert.
 
 ![grafik](https://github.com/Blackn0va/Uebergabeprotokoll/assets/12220332/97668590-027e-4af5-89f6-e5d31ee22ab8)
 
