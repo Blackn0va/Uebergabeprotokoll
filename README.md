@@ -5,3 +5,7 @@ Mit diesem Tool kann man Übergabeprotokolle erstellen. Einfach ein paar Informa
 Erstellt wird ein PDF´f Dokument, welches unterschrieben werden kann.
 
 ![grafik](https://github.com/Blackn0va/Uebergabeprotokoll/assets/12220332/97668590-027e-4af5-89f6-e5d31ee22ab8)
+
+Die Vorlage für das Protokoll:
+
+![grafik](https://github.com/Blackn0va/Uebergabeprotokoll/assets/12220332/90daef02-a75e-4e5b-807e-01658d8ecfd0)
