@@ -1,5 +1,6 @@
 ﻿using Microsoft.Office.Interop.Word;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
 using System.Threading;
@@ -325,6 +326,14 @@ namespace Übergabeprotokoll
                         s2.Disconnect(true);
                         s2.Close();
                     }
+
+                    //close all word processes
+                    foreach (Process proc in Process.GetProcessesByName("WINWORD"))
+                    {
+                        proc.Kill();
+                    }
+
+                    frmHauptprogramm.ProtokolleLaden();
 
                     //datei wird 2 mal an den Drucker gesendet
                     //s.Connect(Drucker, 9100);

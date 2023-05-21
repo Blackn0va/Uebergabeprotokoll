@@ -38,8 +38,24 @@ namespace Übergabeprotokoll
             //das Label beinhaltet das Datum in kurzform
             lblDatum.Text = Convert.ToString(DateTime.Now.ToString("yyyy-MM-dd"));
 
+
+
+            ProtokolleLaden();
+
+            //datenbank erstellen wenn nicht vorhanden
+            SQL_Befehl.CreateDatabase();
+
+            SQL_Befehl.Display_Data();
+
+        }
+
+        public void ProtokolleLaden()
+        {
+            //clear listbox
+            listBox1.Items.Clear();
+
             //string to workingDirectory
-            string workingDirectory =  Environment.CurrentDirectory;
+            string workingDirectory = Environment.CurrentDirectory;
             //check if Directory exists
             if (!System.IO.Directory.Exists(workingDirectory + @"\Protokolle\"))
             {
@@ -60,14 +76,6 @@ namespace Übergabeprotokoll
             {
                 dgvProtokolle.FirstDisplayedCell = dgvProtokolle.Rows[dgvProtokolle.RowCount - 1].Cells[0];
             }
-
-
-
-            //datenbank erstellen wenn nicht vorhanden
-            SQL_Befehl.CreateDatabase();
-
-            SQL_Befehl.Display_Data();
-
         }
 
         [STAThread]
