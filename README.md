@@ -12,3 +12,5 @@ Die Vorlage für das Protokoll:
 
 Word muss installiert sein, da die Vorlage mit Word erstellt wurde.
 Die Variablen der Vorlage werden beim erstellen des Übergabeprotokolls durch die jeweiligen Werte aus der Datenbank überschrieben. leere Felder werden gelöscht.
+
+![grafik](https://github.com/Blackn0va/Uebergabeprotokoll/assets/12220332/e52a406e-62dd-4933-b36b-fd857d2409c4)
