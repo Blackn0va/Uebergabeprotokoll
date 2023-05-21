@@ -9,3 +9,6 @@ Erstellt wird ein PDF´f Dokument, welches unterschrieben werden kann.
 Die Vorlage für das Protokoll:
 
 ![grafik](https://github.com/Blackn0va/Uebergabeprotokoll/assets/12220332/90daef02-a75e-4e5b-807e-01658d8ecfd0)
+
+Word muss installiert sein, da die Vorlage mit Word erstellt wurde.
+Die Variablen der Vorlage werden beim erstellen des Übergabeprotokolls durch die jeweiligen Werte aus der Datenbank überschrieben. leere Felder werden gelöscht.
