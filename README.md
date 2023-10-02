@@ -1,6 +1,5 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Blackn0va/Uebergabeprotokoll/graphs/commit-activity)
 ![Maintainer](https://img.shields.io/badge/maintainer-Blackn0va-blue)
-[![CC-0 license](https://img.shields.io/badge/License-CC--0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0)
 [![Linux](https://img.shields.io/badge/Linux--red.svg)](https://shields.io/)
 [![Mac](https://img.shields.io/badge/Mac--red.svg)](https://shields.io/)
 [![Windows](https://img.shields.io/badge/Windows--green.svg)](https://shields.io/)
