@@ -1,3 +1,12 @@
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Blackn0va/Uebergabeprotokoll/graphs/commit-activity)
+![Maintainer](https://img.shields.io/badge/maintainer-Blackn0va-blue)
+[![CC-0 license](https://img.shields.io/badge/License-CC--0-blue.svg)](https://creativecommons.org/licenses/by-nd/4.0)
+[![Linux](https://img.shields.io/badge/Linux--red.svg)](https://shields.io/)
+[![Mac](https://img.shields.io/badge/Mac--red.svg)](https://shields.io/)
+[![Windows](https://img.shields.io/badge/Windows--green.svg)](https://shields.io/)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
+
 # Übergabeprotokoll
 
 Mit diesem Tool kann man Übergabeprotokolle erstellen. Einfach ein paar Informationen eintragen und speichern. Gespeichert wird in einer Lokalen Flatfile SQLite Datenbank.
@@ -17,3 +26,8 @@ Word muss installiert sein, da die Vorlage mit Word erstellt wurde.
 Die Variablen der Vorlage werden beim erstellen des Übergabeprotokolls durch die jeweiligen Werte aus der Datenbank überschrieben. leere Felder werden gelöscht.
 
 ![grafik](https://github.com/Blackn0va/Uebergabeprotokoll/assets/12220332/e52a406e-62dd-4933-b36b-fd857d2409c4)
+
+
+[![Blackn0va's github stats](https://github-readme-stats.vercel.app/api?username=Blackn0va&theme=blue-green)](https://github.com/Blackn0va/)
+[![Blackn0va's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Blackn0va&theme=blue-green)](https://github.com/Blackn0va/)
+[![Blackn0va's github streak](https://github-readme-streak-stats.herokuapp.com/?user=Blackn0va&theme=blue-green)](https://github.com/Blackn0va/)
